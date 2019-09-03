@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="node">
+    <a href="@ViewBag.HierarchyNodeModel.Href">@ViewBag.HierarchyNodeModel.Name</a>
+</div>
+<ul>
+    @foreach (var child in ViewBag.HierarchyNodeModel.Children)
+    {
+        <li>
+            <div class="node">
+                <a href="@child.Href">@child.Name</a>
+            </div>
+        </li>
+    }
+</ul>
